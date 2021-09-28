@@ -1,0 +1,25 @@
+{
+  "name": "@coloroscopy/react",
+  "description": "React components for coloroscopy.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/BorisTB/coloroscopy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BorisTB/coloroscopy.git",
+    "directory": "libs/packages/react"
+  },
+  "keywords": [
+    "color",
+    "coloroscopy",
+    "react",
+    "components"
+  ],
+  "author": {
+    "name": "BorisTB",
+    "url": "https://github.com/BorisTB"
+  },
+  "bugs": {
+    "url": "https://github.com/BorisTB/coloroscopy/issues"
+  }
+}

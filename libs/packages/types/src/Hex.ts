@@ -19,6 +19,15 @@ export type HexDigitLowercase =
 export type HexDigit = HexDigitLowercase | Uppercase<HexDigitLowercase>
 
 /**
+ * This is a hack because typescript doesn't offer better solution right now.
+ *
+ * Use ValidHexColor<T> if you can;
+ */
+export type HexColor = `#${string}` & {
+  readonly __validHexColor: unique symbol
+}
+
+/**
  * Validation of HEX color string
  *
  * We can't use template literals as it would generate extremely large union type.
@@ -35,6 +44,9 @@ export type HexDigit = HexDigitLowercase | Uppercase<HexDigitLowercase>
  *   logColor('#ff0') // ok, compared to type: '#ff0'
  *   logColor('#00AF65') // ok, compared to type: '#00AF65'
  *   logColor('#23X') // error, compared to type: '#230'
+ *
+ *  Big up to this stackoverflow answer:
+ *  https://stackoverflow.com/a/54675049/3739087
  */
 export type ToHexDigit<T extends string = string> = T extends HexDigit ? T : 0
 

@@ -1,1 +1,1 @@
-export * from './lib/packages-utils'
+export * from './cssNamedColors'

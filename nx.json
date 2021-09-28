@@ -28,10 +28,13 @@
     ]
   },
   "projects": {
-    "packages-utils": {
+    "packages-react": {
       "tags": []
     },
-    "types": {
+    "packages-types": {
+      "tags": []
+    },
+    "packages-utils": {
       "tags": []
     },
     "website": {

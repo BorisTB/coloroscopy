@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@coloroscopy/types": ["libs/types/src/index.ts"],
+      "@coloroscopy/react": ["libs/packages/react/src/index.ts"],
+      "@coloroscopy/types": ["libs/packages/types/src/index.ts"],
       "@coloroscopy/utils": ["libs/packages/utils/src/index.ts"]
     }
   },
