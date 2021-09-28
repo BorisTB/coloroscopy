@@ -1,0 +1,45 @@
+{
+  "npmScope": "coloroscopy",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "N2M3NDg5ZTUtYzliOS00YjU4LThhNmMtMWNkNzk1NjdhNWUzfHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "packages-utils": {
+      "tags": []
+    },
+    "types": {
+      "tags": []
+    },
+    "website": {
+      "tags": []
+    },
+    "website-e2e": {
+      "tags": [],
+      "implicitDependencies": ["website"]
+    }
+  }
+}
