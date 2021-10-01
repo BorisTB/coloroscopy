@@ -1,7 +1,18 @@
-# packages-react
+# `@coloroscopy/react`
 
-This library was generated with [Nx](https://nx.dev).
+### React components and hooks to work with colors
 
-## Running unit tests
+## Installation
+yarn:
+```shell
+yarn add @coloroscopy/react
+```
 
-Run `nx test packages-react` to execute the unit tests via [Jest](https://jestjs.io).
+npm:
+```shell
+npm install @coloroscopy/react
+```
+
+## Components:
+### `Checkboard`
+### `Swatch`

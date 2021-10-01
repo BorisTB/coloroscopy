@@ -1,7 +1,26 @@
-# packages-utils
+# `@coloroscopy/utils`
 
-This library was generated with [Nx](https://nx.dev).
+### Utilities to work with colors
 
-## Running unit tests
+## Installation
+yarn:
+```shell
+yarn add @coloroscopy/utils
+```
 
-Run `nx test packages-utils` to execute the unit tests via [Jest](https://jestjs.io).
+npm:
+```shell
+npm install @coloroscopy/utils
+```
+
+## Parsers:
+### `hexToRgbaObject`
+### `hexValueToAlphaValue`
+### `hexValueToDecimal`
+### `hexValueToInteger`
+### `hexValueToRgbValue`
+### `normalizeHexValue`
+### `normalizeValue`
+### `stringToNumber`
+### `value255ToDecimal`
+### `valueToPxValue`

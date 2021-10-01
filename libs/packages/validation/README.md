@@ -1,7 +1,47 @@
-# packages-validation
+# `@coloroscopy/validation`
 
-This library was generated with [Nx](https://nx.dev).
+### Validators for color values
 
-## Running unit tests
+## Installation
+yarn:
+```shell
+yarn add @coloroscopy/validation
+```
 
-Run `nx test packages-validation` to execute the unit tests via [Jest](https://jestjs.io).
+npm:
+```shell
+npm install @coloroscopy/validation
+```
+
+## Validators:
+
+### `isCssColorName`
+
+Checks if value is css color name
+
+```typescript
+isCssColorName('aqua') // true
+isCssColorName('teal') // true
+isCssColorName('Pablo') // false
+```
+
+### `isHexColor`
+
+Checks if value is valid hex color
+
+```typescript
+isHexColor('#fa0c85') // true
+isHexColor('#c4f') // true
+isHexColor('#fa0c85ff') // true
+isHexColor('aqua') // false
+```
+
+
+### `isHexDigit`
+### `isHexDigitPair`
+### `isHexValue`
+### `isNamedTransparentColor`
+### `isNonEmptyString`
+### `isRgbColor` @TODO
+### `isTransparentColor` @TODO
+### `isValidColor`

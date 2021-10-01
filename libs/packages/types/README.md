@@ -1,7 +1,28 @@
-# packages-types
+# `@coloroscopy/types`
 
-This library was generated with [Nx](https://nx.dev).
+### Typescript definitions and utils for color values
 
-## Running unit tests
+## Installation
+yarn:
+```shell
+yarn add -D @coloroscopy/types
+```
 
-Run `nx test packages-types` to execute the unit tests via [Jest](https://jestjs.io).
+npm:
+```shell
+npm install @coloroscopy/types --save-dev
+```
+
+## Types:
+### `Color`
+### `ColorInput`
+### `CssNamedColor`
+### `Hex`
+### `HexDigit`
+### `HexDigitPair`
+### `HexDigitLowercase`
+### `HexDigitUppercase`
+### `HexValue`
+### `Rgba`
+### `TransparentColorName`
+### `Values`

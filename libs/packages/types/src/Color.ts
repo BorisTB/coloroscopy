@@ -1,4 +1,4 @@
-import { CssColorName, TransparentColorName } from './CssColors'
+import { CssColorName, TransparentColorName } from './CssNamedColor'
 import { HexColor } from './Hex'
 import { RgbaColor, RgbColor } from './Rgba'
 
@@ -11,10 +11,3 @@ export type Color =
   | RgbColor
   | RgbaColor
   | TransparentColorName
-
-/**
- * @description Possible color input for coloroscopy tools
- * @example
- *   function handleSelectedColor(color: ColorInput) {}
- */
-export type ColorInput = Color | string
