@@ -28,6 +28,9 @@
     ]
   },
   "projects": {
+    "packages-constants": {
+      "tags": []
+    },
     "packages-react": {
       "tags": []
     },

@@ -4,7 +4,7 @@ import { CssColorName, HexColor } from '@coloroscopy/types'
  * @description HEX values for named css colors
  * @see https://www.w3.org/TR/css-color-3/#svg-color
  */
-export const cssColors: Readonly<Record<CssColorName, HexColor>> = {
+export const NAMED_COLORS_VALUES: Readonly<Record<CssColorName, HexColor>> = {
   aliceblue: '#f0f8ff',
   antiquewhite: '#faebd7',
   aqua: '#0ff',

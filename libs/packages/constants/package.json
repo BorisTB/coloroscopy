@@ -1,19 +1,18 @@
 {
-  "name": "@coloroscopy/types",
-  "description": "Types and typescript utils for color manipulation.",
+  "name": "@coloroscopy/constants",
+  "description": "Constant values for colors, like color names and their values.",
   "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/BorisTB/coloroscopy",
   "repository": {
     "type": "git",
     "url": "https://github.com/BorisTB/coloroscopy.git",
-    "directory": "libs/packages/types"
+    "directory": "libs/packages/constants"
   },
   "keywords": [
     "color",
     "coloroscopy",
-    "types",
-    "typescript"
+    "constants"
   ],
   "author": {
     "name": "BorisTB",

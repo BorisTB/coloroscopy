@@ -1,7 +1,7 @@
 {
   "name": "@coloroscopy/react",
   "description": "React components for coloroscopy.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/BorisTB/coloroscopy",
   "repository": {
@@ -21,5 +21,12 @@
   },
   "bugs": {
     "url": "https://github.com/BorisTB/coloroscopy/issues"
+  },
+  "dependencies": {
+    "@coloroscopy/utils": "0.0.1",
+    "@coloroscopy/types": "0.0.1",
+    "@coloroscopy/validation": "0.0.1",
+    "@coloroscopy/constants": "0.0.1",
+    "@emotion/styled": "11.1.5"
   }
 }
