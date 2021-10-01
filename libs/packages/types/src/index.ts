@@ -1,6 +1,7 @@
 export * from './Color'
 export * from './ColorInput'
 export * from './CssNamedColor'
+export * from './CssVariableName'
 export * from './Hex'
 export * from './HexDigit'
 export * from './HexDigitPair'

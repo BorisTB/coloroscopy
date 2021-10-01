@@ -17,6 +17,7 @@ npm install @coloroscopy/types --save-dev
 ### `Color`
 ### `ColorInput`
 ### `CssNamedColor`
+### `CssVariableName`
 ### `Hex`
 ### `HexDigit`
 ### `HexDigitPair`

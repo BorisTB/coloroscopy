@@ -37,6 +37,9 @@
     "packages-react": {
       "tags": []
     },
+    "packages-theme": {
+      "tags": []
+    },
     "packages-types": {
       "tags": []
     },

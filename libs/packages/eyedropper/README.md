@@ -1,28 +1,28 @@
-# `@coloroscopy/types`
+# `@coloroscopy/eyedropper`
 
-### Typescript definitions and utils for color values
+### Eyedropper tool to pick any color from web page
 
 ## Installation
 yarn:
 ```shell
-yarn add -D @coloroscopy/types
+yarn add @coloroscopy/eyedropper
 ```
 
 npm:
 ```shell
-npm install @coloroscopy/types --save-dev
+npm install @coloroscopy/eyedropper
 ```
 
-## Types:
-### `Color`
-### `ColorInput`
-### `CssNamedColor`
-### `Hex`
-### `HexDigit`
-### `HexDigitPair`
-### `HexDigitLowercase`
-### `HexDigitUppercase`
-### `HexValue`
-### `Rgba`
-### `TransparentColorName`
-### `Values`
+## Usage:
+
+```typescript
+import { EyeDropper } from "@coloroscopy/eyedropper";
+
+const eyeDropper = new EyeDropper()
+
+function runEyeDropper() {
+    eyeDropper.open().then(color => {
+        console.log({ color })
+    })
+}
+```

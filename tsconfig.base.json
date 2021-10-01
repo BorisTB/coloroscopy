@@ -18,6 +18,7 @@
       "@coloroscopy/constants": ["libs/packages/constants/src/index.ts"],
       "@coloroscopy/eyedropper": ["libs/packages/eyedropper/src/index.ts"],
       "@coloroscopy/react": ["libs/packages/react/src/index.ts"],
+      "@coloroscopy/theme": ["libs/packages/theme/src/index.ts"],
       "@coloroscopy/types": ["libs/packages/types/src/index.ts"],
       "@coloroscopy/utils": ["libs/packages/utils/src/index.ts"],
       "@coloroscopy/validation": ["libs/packages/validation/src/index.ts"]

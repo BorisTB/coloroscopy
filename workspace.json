@@ -108,6 +108,39 @@
         }
       }
     },
+    "packages-theme": {
+      "root": "libs/packages/theme",
+      "sourceRoot": "libs/packages/theme/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/packages/theme/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/packages/theme"],
+          "options": {
+            "jestConfig": "libs/packages/theme/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/packages/theme",
+            "tsConfig": "libs/packages/theme/tsconfig.lib.json",
+            "packageJson": "libs/packages/theme/package.json",
+            "main": "libs/packages/theme/src/index.ts",
+            "assets": ["libs/packages/theme/*.md"]
+          }
+        }
+      }
+    },
     "packages-types": {
       "root": "libs/packages/types",
       "sourceRoot": "libs/packages/types/src",
