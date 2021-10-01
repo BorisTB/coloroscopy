@@ -108,6 +108,39 @@
         }
       }
     },
+    "packages-validation": {
+      "root": "libs/packages/validation",
+      "sourceRoot": "libs/packages/validation/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/packages/validation/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/packages/validation"],
+          "options": {
+            "jestConfig": "libs/packages/validation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/packages/validation",
+            "tsConfig": "libs/packages/validation/tsconfig.lib.json",
+            "packageJson": "libs/packages/validation/package.json",
+            "main": "libs/packages/validation/src/index.ts",
+            "assets": ["libs/packages/validation/*.md"]
+          }
+        }
+      }
+    },
     "website": {
       "root": "apps/website",
       "sourceRoot": "apps/website/src",

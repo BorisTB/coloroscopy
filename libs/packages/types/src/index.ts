@@ -1,4 +1,5 @@
 export * from './Color'
 export * from './CssColors'
 export * from './Hex'
+export * from './Rgba'
 export * from './Values'

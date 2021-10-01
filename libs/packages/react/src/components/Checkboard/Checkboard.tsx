@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { toPx } from '../../../../utils/src/formatting'
+import { toPx } from '@coloroscopy/utils'
 
 export interface CheckboardProps extends React.ComponentPropsWithRef<'div'> {
   size?: number

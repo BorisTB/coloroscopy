@@ -17,7 +17,8 @@
     "paths": {
       "@coloroscopy/react": ["libs/packages/react/src/index.ts"],
       "@coloroscopy/types": ["libs/packages/types/src/index.ts"],
-      "@coloroscopy/utils": ["libs/packages/utils/src/index.ts"]
+      "@coloroscopy/utils": ["libs/packages/utils/src/index.ts"],
+      "@coloroscopy/validation": ["libs/packages/validation/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

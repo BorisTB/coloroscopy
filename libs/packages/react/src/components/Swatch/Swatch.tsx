@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { Color, ColorInput } from '@coloroscopy/types'
-import { isValidColor } from '../../../../utils/src/validation'
+import { isValidColor } from '@coloroscopy/validation'
 
 export interface SwatchProps extends React.ComponentPropsWithRef<'div'> {
   color: ColorInput

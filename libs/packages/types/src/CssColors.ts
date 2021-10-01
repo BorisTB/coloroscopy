@@ -1,5 +1,9 @@
-// https://www.w3.org/TR/css-color-3/#svg-color
-
+/**
+ * @description CSS named color
+ * @see https://www.w3.org/TR/css-color-3/#svg-color
+ * @example
+ *   color: 'aqua'
+ */
 export type CssColorName =
   | 'aliceblue'
   | 'antiquewhite'
@@ -151,4 +155,9 @@ export type CssColorName =
   | 'yellow'
   | 'yellowgreen'
 
+/**
+ * @description Transparent color named value
+ * @example
+ *   color: 'transparent'
+ */
 export type TransparentColorName = 'transparent'
