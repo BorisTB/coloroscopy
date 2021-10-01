@@ -1,6 +1,7 @@
 # Coloroscopy
 
 Core:
+- [`@coloroscopy/constants`](lib-constants)
 - [`@coloroscopy/types`](lib-types)
 - [`@coloroscopy/utils`](lib-utils)
 - [`@coloroscopy/validation`](lib-validation)
@@ -10,6 +11,7 @@ Frameworks:
 
 
 
+[lib-constants]: libs/packages/constants
 [lib-react]: libs/packages/react
 [lib-types]: libs/packages/types
 [lib-utils]: libs/packages/utils
