@@ -34,6 +34,39 @@
         }
       }
     },
+    "packages-eyedropper": {
+      "root": "libs/packages/eyedropper",
+      "sourceRoot": "libs/packages/eyedropper/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/packages/eyedropper/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/packages/eyedropper"],
+          "options": {
+            "jestConfig": "libs/packages/eyedropper/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/packages/eyedropper",
+            "tsConfig": "libs/packages/eyedropper/tsconfig.lib.json",
+            "packageJson": "libs/packages/eyedropper/package.json",
+            "main": "libs/packages/eyedropper/src/index.ts",
+            "assets": ["libs/packages/eyedropper/*.md"]
+          }
+        }
+      }
+    },
     "packages-react": {
       "root": "libs/packages/react",
       "sourceRoot": "libs/packages/react/src",

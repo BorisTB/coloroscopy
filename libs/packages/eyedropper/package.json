@@ -1,0 +1,24 @@
+{
+  "name": "@coloroscopy/eyedropper",
+  "description": "Eye dropper tool to pick any color on web page",
+  "version": "0.0.2",
+  "license": "MIT",
+  "homepage": "https://github.com/BorisTB/coloroscopy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BorisTB/coloroscopy.git",
+    "directory": "libs/packages/eyedropper"
+  },
+  "keywords": [
+    "color",
+    "coloroscopy",
+    "eyedropper"
+  ],
+  "author": {
+    "name": "BorisTB",
+    "url": "https://github.com/BorisTB"
+  },
+  "bugs": {
+    "url": "https://github.com/BorisTB/coloroscopy/issues"
+  }
+}
