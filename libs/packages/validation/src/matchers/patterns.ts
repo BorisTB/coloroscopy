@@ -74,4 +74,4 @@ export const separator = '[\\s|,]'
  * @see https://regex101.com/r/WPS9LR/4
  */
 export const rgbPattern =
-  `^rgba?\\(${optionalSpace}(?<r>\\d+(?<unit>%?))${optionalSpace}(?<separator>[\\s|,])${optionalSpace}(?<g>\\d+\\k<unit>)${optionalSpace}\\k<separator>${optionalSpace}(?<b>\\d+\\k<unit>)${optionalSpace}(?:(?<=(?:,.+))(?:,${optionalSpace}(?<a>(?:\\d+)?(?:.\\d+)))?${optionalSpace})?\\)$` as const
+  `^rgba?\\(${optionalSpace}(?<r>\\d+(?<unit>%?))${optionalSpace}(?<separator>[\\s|,])${optionalSpace}(?<g>\\d+\\k<unit>)${optionalSpace}\\k<separator>${optionalSpace}(?<b>\\d+\\k<unit>)${optionalSpace}(?:(?<=(?:,.+))(?:,${optionalSpace}(?<a>(?:\\d+)?(?:\\.?\\d+)))?${optionalSpace})?\\)$` as const
