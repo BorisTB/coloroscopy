@@ -1,5 +1,5 @@
-import { Color } from '@coloroscopy/types'
+import { ColorType } from '@coloroscopy/types'
 
 export interface EyeDropperInterface {
-  open(): Promise<Color>
+  open(): Promise<ColorType>
 }

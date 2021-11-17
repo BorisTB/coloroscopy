@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Color, ColorInput } from '@coloroscopy/types'
+import { ColorType, ColorInput } from '@coloroscopy/types'
 import { isValidColor } from '@coloroscopy/validation'
 
 export interface SwatchProps extends React.ComponentPropsWithRef<'div'> {
@@ -8,7 +8,7 @@ export interface SwatchProps extends React.ComponentPropsWithRef<'div'> {
 
 export const Swatch = React.forwardRef<HTMLDivElement, SwatchProps>(
   ({ color }, ref) => {
-    const validColor = useMemo<Color>(
+    const validColor = useMemo<ColorType>(
       () => (isValidColor(color) ? color : 'transparent'),
       [color]
     )

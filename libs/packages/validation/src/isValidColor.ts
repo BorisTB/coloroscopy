@@ -1,14 +1,14 @@
-import { Color } from '@coloroscopy/types'
-import { isHexColor } from './isHexColor'
+import { ColorType } from '@coloroscopy/types'
+import { isHexColorString } from './isHexColorString'
 import { isCssColorName } from './isCssColorName'
-import { isRgbColor } from './isRgbColor'
-import { isNamedTransparentColor } from './isNamedTransparentColor'
+import { isRgbColorString } from './isRgbColorString'
+import { isTransparentColorName } from './isTransparentColorName'
 
-export function isValidColor(value: unknown): value is Color {
+export function isValidColor(value: unknown): value is ColorType {
   return (
-    isNamedTransparentColor(value) ||
+    isTransparentColorName(value) ||
     isCssColorName(value) ||
-    isHexColor(value) ||
-    isRgbColor(value)
+    isHexColorString(value) ||
+    isRgbColorString(value)
   )
 }

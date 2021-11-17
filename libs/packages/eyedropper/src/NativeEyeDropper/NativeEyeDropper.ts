@@ -1,12 +1,12 @@
 import { EyeDropper } from '../EyeDropper'
-import { Color } from '@coloroscopy/types'
+import { ColorType } from '@coloroscopy/types'
 import { EyeDropperInterface } from '../EyeDropperInterface'
 
 interface ColorSelectionOptions {}
 
 interface EyeDropperApi {
   new ()
-  open(options?: ColorSelectionOptions): Promise<Color>
+  open(options?: ColorSelectionOptions): Promise<ColorType>
 }
 
 declare global {

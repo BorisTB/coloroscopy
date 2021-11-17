@@ -6,7 +6,7 @@ import { TransparentColorName } from './TransparentColorName'
 /**
  * @description Valid color value, might be processed ColorInput
  */
-export type Color =
+export type ColorType =
   | CssColorName
   | HexColor
   | RgbColor

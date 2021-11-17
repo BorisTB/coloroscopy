@@ -1,0 +1,23 @@
+{
+  "name": "@coloroscopy/color",
+  "description": "Helper class to work with colors easily",
+  "version": "0.0.2",
+  "license": "MIT",
+  "homepage": "https://github.com/BorisTB/coloroscopy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BorisTB/coloroscopy.git",
+    "directory": "libs/packages/color"
+  },
+  "keywords": [
+    "color",
+    "coloroscopy"
+  ],
+  "author": {
+    "name": "BorisTB",
+    "url": "https://github.com/BorisTB"
+  },
+  "bugs": {
+    "url": "https://github.com/BorisTB/coloroscopy/issues"
+  }
+}

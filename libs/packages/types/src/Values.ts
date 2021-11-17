@@ -34,7 +34,7 @@ export type Value255 = 0 | 255 | number
  * @example
  *   'rgb(0, 100%, 43%)'
  */
-export type ValuePercentage = 0 | `${number}%`
+export type ValuePercentage = 0 | '0' | `${number}%`
 
 /**
  * @description Value of alpha channel

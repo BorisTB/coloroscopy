@@ -1,4 +1,4 @@
-export * from './Color'
+export * from './ColorType'
 export * from './ColorInput'
 export * from './CssNamedColor'
 export * from './CssVariableName'

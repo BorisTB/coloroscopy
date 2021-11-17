@@ -1,5 +1,5 @@
 import { HexValue } from '@coloroscopy/types'
-import { normalizeHexValue } from './normalizeHexValue'
+import { normalizeHexValue } from '../formatting'
 
 export function hexValueToInteger(value: HexValue): number {
   const normalizedHexValue = normalizeHexValue(value)

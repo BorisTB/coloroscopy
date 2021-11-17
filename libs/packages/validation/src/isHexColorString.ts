@@ -2,7 +2,7 @@ import { HexColorValid } from '@coloroscopy/types'
 import { anyHexMatcher } from './matchers'
 import { isNonEmptyString } from './isNonEmptyString'
 
-export function isHexColor(value: unknown): value is HexColorValid {
+export function isHexColorString(value: unknown): value is HexColorValid {
   return (
     isNonEmptyString(value) &&
     value.startsWith('#') &&

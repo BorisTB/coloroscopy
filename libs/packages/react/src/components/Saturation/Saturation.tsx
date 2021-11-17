@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Color, ColorInput } from '@coloroscopy/types'
+import { ColorType, ColorInput } from '@coloroscopy/types'
 import { isValidColor } from '@coloroscopy/validation'
 import styled from '@emotion/styled'
 
@@ -35,7 +35,7 @@ const BlackGradient = styled.div`
 
 export const Saturation = React.forwardRef<HTMLDivElement, SaturationProps>(
   ({ color }, ref) => {
-    const validColor = useMemo<Color>(
+    const validColor = useMemo<ColorType>(
       () => (isValidColor(color) ? color : 'transparent'),
       [color]
     )

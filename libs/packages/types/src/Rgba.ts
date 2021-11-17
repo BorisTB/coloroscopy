@@ -13,6 +13,8 @@ import {
  */
 export type RgbValue = Value255 | ValuePercentage
 
+export type RgbValueString = `${RgbValue}`
+
 /**
  * @description RGB color (without alpha channel)
  * @example

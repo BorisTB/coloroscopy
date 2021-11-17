@@ -1,7 +1,7 @@
 import { EyeDropperInterface } from './EyeDropperInterface'
 import { NativeEyeDropper } from './NativeEyeDropper'
 import { CanvasEyeDropper } from './CanvasEyeDropper/CanvasEyeDropper'
-import { Color } from '@coloroscopy/types'
+import { ColorType } from '@coloroscopy/types'
 
 export class EyeDropper {
   private eyeDropper: EyeDropperInterface
@@ -15,7 +15,7 @@ export class EyeDropper {
     this.eyeDropper = new CanvasEyeDropper()
   }
 
-  async open(): Promise<Color> {
+  async open(): Promise<ColorType> {
     return this.eyeDropper.open()
   }
 }

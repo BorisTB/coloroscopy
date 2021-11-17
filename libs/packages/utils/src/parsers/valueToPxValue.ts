@@ -1,6 +1,6 @@
 import { MaybeValue } from '@coloroscopy/types'
 import { stringToNumber } from './stringToNumber'
-import { normalizeValue } from './normalizeValue'
+import { normalizeValue } from '../formatting'
 import { isNonEmptyString } from '@coloroscopy/validation'
 
 export function valueToPxValue(value: MaybeValue): number {

@@ -16,20 +16,27 @@ type PatternGroupNames<Pattern extends RegexPattern> =
       : GroupName | PatternGroupNames<Rest>
     : never
 
-type MatchesGroup<Pattern extends RegexPattern> = {
-  [K in PatternGroupNames<Pattern>]: string
+type MatchesGroup<
+  Pattern extends RegexPattern,
+  Value extends string = string
+> = {
+  [K in PatternGroupNames<Pattern>]: Value
 }
 
-export interface Matcher<Pattern extends RegexPattern> {
-  match: (value: string) => MatchesGroup<Pattern> | undefined
+export interface Matcher<
+  Pattern extends RegexPattern,
+  Value extends string = string
+> {
+  match: (value: string) => MatchesGroup<Pattern, Value> | undefined
   test: (value: string) => boolean
 }
 
 const cachedRegexps = new Map<RegexPattern, RegExp>()
 
-export function createMatcher<Pattern extends RegexPattern = RegexPattern>(
-  pattern: Pattern
-): Matcher<Pattern> {
+export function createMatcher<
+  Value extends string = string,
+  Pattern extends RegexPattern = RegexPattern
+>(pattern: Pattern): Matcher<Pattern, Value> {
   if (!cachedRegexps.has(pattern)) {
     cachedRegexps.set(pattern, new RegExp(pattern))
   }
@@ -38,7 +45,7 @@ export function createMatcher<Pattern extends RegexPattern = RegexPattern>(
 
   return {
     match: (value) =>
-      regexp?.exec(value)?.groups as MatchesGroup<Pattern> | undefined,
+      regexp?.exec(value)?.groups as MatchesGroup<Pattern, Value> | undefined,
     test: (value) => regexp?.test(value) || false
   }
 }

@@ -1,10 +1,7 @@
 import { CssColorName } from '@coloroscopy/types'
-import { NAMED_COLORS_VALUES } from '@coloroscopy/constants'
 import { isNonEmptyString } from './isNonEmptyString'
+import { cssColorNames } from './cssColorNames'
 
 export function isCssColorName(value: unknown): value is CssColorName {
-  return (
-    isNonEmptyString(value) &&
-    isNonEmptyString(NAMED_COLORS_VALUES[value as CssColorName])
-  )
+  return isNonEmptyString(value) && cssColorNames.has(value)
 }

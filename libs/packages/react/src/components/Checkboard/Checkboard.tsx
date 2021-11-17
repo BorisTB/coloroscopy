@@ -31,5 +31,5 @@ export const Checkboard = React.forwardRef<HTMLDivElement, CheckboardProps>(
 )
 
 Checkboard.defaultProps = {
-  size: 10
+  size: 15
 }

@@ -1,6 +1,40 @@
 {
   "version": 2,
   "projects": {
+    "packages-color": {
+      "root": "libs/packages/color",
+      "sourceRoot": "libs/packages/color/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/packages/color/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/packages/color"],
+          "options": {
+            "jestConfig": "libs/packages/color/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/packages/color",
+            "tsConfig": "libs/packages/color/tsconfig.lib.json",
+            "packageJson": "libs/packages/color/package.json",
+            "main": "libs/packages/color/src/index.ts",
+            "assets": ["libs/packages/color/*.md"]
+          }
+        }
+      },
+      "tags": []
+    },
     "packages-constants": {
       "root": "libs/packages/constants",
       "sourceRoot": "libs/packages/constants/src",

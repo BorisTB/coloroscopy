@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@coloroscopy/color": ["libs/packages/color/src/index.ts"],
       "@coloroscopy/constants": ["libs/packages/constants/src/index.ts"],
       "@coloroscopy/eyedropper": ["libs/packages/eyedropper/src/index.ts"],
       "@coloroscopy/react": ["libs/packages/react/src/index.ts"],
