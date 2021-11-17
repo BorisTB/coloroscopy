@@ -27,34 +27,24 @@
       }
     ]
   },
-  "projects": {
-    "packages-constants": {
-      "tags": []
-    },
-    "packages-eyedropper": {
-      "tags": []
-    },
-    "packages-react": {
-      "tags": []
-    },
-    "packages-theme": {
-      "tags": []
-    },
-    "packages-types": {
-      "tags": []
-    },
-    "packages-utils": {
-      "tags": []
-    },
-    "packages-validation": {
-      "tags": []
-    },
-    "website": {
-      "tags": []
-    },
-    "website-e2e": {
-      "tags": [],
-      "implicitDependencies": ["website"]
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "@emotion/styled",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "@emotion/styled"
+      },
+      "library": {
+        "style": "@emotion/styled",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "website"
 }

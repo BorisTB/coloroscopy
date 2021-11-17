@@ -32,7 +32,8 @@
             "assets": ["libs/packages/constants/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-eyedropper": {
       "root": "libs/packages/eyedropper",
@@ -65,7 +66,8 @@
             "assets": ["libs/packages/eyedropper/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-react": {
       "root": "libs/packages/react",
@@ -106,7 +108,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-theme": {
       "root": "libs/packages/theme",
@@ -139,7 +142,8 @@
             "assets": ["libs/packages/theme/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-types": {
       "root": "libs/packages/types",
@@ -172,7 +176,8 @@
             "assets": ["libs/packages/types/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-utils": {
       "root": "libs/packages/utils",
@@ -205,7 +210,8 @@
             "assets": ["libs/packages/utils/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "packages-validation": {
       "root": "libs/packages/validation",
@@ -238,7 +244,8 @@
             "assets": ["libs/packages/validation/*.md"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "website": {
       "root": "apps/website",
@@ -315,7 +322,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "website-e2e": {
       "root": "apps/website-e2e",
@@ -342,27 +350,9 @@
             "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
           }
         }
-      }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "@emotion/styled",
-        "linter": "eslint",
-        "babel": true
       },
-      "component": {
-        "style": "@emotion/styled"
-      },
-      "library": {
-        "style": "@emotion/styled",
-        "linter": "eslint"
-      }
+      "tags": [],
+      "implicitDependencies": ["website"]
     }
-  },
-  "defaultProject": "website"
+  }
 }

@@ -3,12 +3,15 @@
 ### Validators for color values
 
 ## Installation
+
 yarn:
+
 ```shell
 yarn add @coloroscopy/validation
 ```
 
 npm:
+
 ```shell
 npm install @coloroscopy/validation
 ```
@@ -36,12 +39,18 @@ isHexColor('#fa0c85ff') // true
 isHexColor('aqua') // false
 ```
 
-
 ### `isHexDigit`
+
 ### `isHexDigitPair`
+
 ### `isHexValue`
+
 ### `isNamedTransparentColor`
+
 ### `isNonEmptyString`
+
 ### `isRgbColor` @TODO
+
 ### `isTransparentColor` @TODO
+
 ### `isValidColor`
