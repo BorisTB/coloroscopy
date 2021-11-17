@@ -24,7 +24,7 @@ export const hexValuePattern = `^${hexDigit}{1,2}$` as const
  *   '#c942a5ff'
  */
 export const anyHexPatern =
-  `^#(?:${hexDigit}{8}|${hexDigit}{6}|${hexDigit}{3})$` as const
+  `^#?(?:${hexDigit}{8}|${hexDigit}{6}|${hexDigit}{3})$` as const
 
 /**
  * @description Match short hex pattern
@@ -33,7 +33,7 @@ export const anyHexPatern =
  *   '#C40'
  */
 export const shortHexPattern =
-  `^#(?<r>${hexDigit})(?<g>${hexDigit})(?<b>${hexDigit})$` as const
+  `^#?(?<r>${hexDigit})(?<g>${hexDigit})(?<b>${hexDigit})$` as const
 
 /**
  * @description Match long hex pattern and hex with alpha
@@ -42,7 +42,7 @@ export const shortHexPattern =
  *   '#c942a5ff'
  */
 export const fullHexPattern =
-  `^#(?<r>${hexDigit}{2})(?<g>${hexDigit}{2})(?<b>${hexDigit}{2})(?<a>${hexDigit}{2})?$` as const
+  `^#?(?<r>${hexDigit}{2})(?<g>${hexDigit}{2})(?<b>${hexDigit}{2})(?<a>${hexDigit}{2})?$` as const
 
 /**
  * @description Space
