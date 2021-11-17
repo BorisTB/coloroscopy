@@ -1,4 +1,4 @@
-import { HexValue, RgbaObject } from '@coloroscopy/types'
+import { HexValue, RgbaObject, Value255 } from '@coloroscopy/types'
 import {
   hexFullMatcher,
   hexShortMatcher,
@@ -8,7 +8,7 @@ import {
 import { hexValueToValue255 } from './hexValueToValue255'
 import { hexValueToAlphaValue } from './hexValueToAlphaValue'
 
-export function hexToRgbaObject(value: string): RgbaObject | null {
+export function hexToRgbaObject(value: string): RgbaObject<Value255> | null {
   const match = hexFullMatcher.match(value) ?? hexShortMatcher.match(value)
 
   if (!isRgbaMatch<HexValue>(match)) {

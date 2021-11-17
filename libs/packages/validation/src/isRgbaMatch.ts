@@ -3,14 +3,14 @@ import { isNonEmptyString } from './isNonEmptyString'
 
 export function isRgbaMatch<
   Value extends string = string,
-  AlphaValue extends string = never
+  AlphaValue extends string = Value
 >(
   value: unknown
 ): value is {
   r: Value
   g: Value
   b: Value
-  a?: AlphaValue extends never ? Value : AlphaValue
+  a?: AlphaValue
 } {
   return (
     isNonEmptyObject(value) &&

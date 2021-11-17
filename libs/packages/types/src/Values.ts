@@ -16,6 +16,13 @@ export type OptionalSpace = '' | ' '
 export type MaybeValue = string | number | null | undefined
 
 /**
+ * @description Percentage value
+ * @example
+ *   100
+ */
+export type Percentage = 0 | 100 | number
+
+/**
  * @description Values in pixels
  * @example
  *   '100px'
@@ -34,7 +41,7 @@ export type Value255 = 0 | 255 | number
  * @example
  *   'rgb(0, 100%, 43%)'
  */
-export type ValuePercentage = 0 | '0' | `${number}%`
+export type ValuePercentage = 0 | '0' | `${Percentage}%`
 
 /**
  * @description Value of alpha channel
@@ -44,8 +51,15 @@ export type ValuePercentage = 0 | '0' | `${number}%`
 export type AlphaValue = 0 | 1 | number | ValuePercentage
 
 /**
+ * @description Stringified value of alpha channel
+ */
+export type AlphaValueString = `${AlphaValue}`
+
+/**
  * @description Value of alpha channel when color is transparent
  * @example
  *   0, '0%'
  */
 export type TransparentAlphaValue = 0 | '0%'
+
+export type Brightness = number

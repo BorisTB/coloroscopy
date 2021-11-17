@@ -1,4 +1,4 @@
-import { RgbaObject } from '@coloroscopy/types'
+import { RgbaObject, Value255 } from '@coloroscopy/types'
 import {
   hexToRgbaObject,
   normalizeValue,
@@ -11,8 +11,8 @@ import {
 } from '@coloroscopy/validation'
 import { getColorNameHex } from './getColorNameHex'
 
-export function stringToRgbaObject(value: string): RgbaObject | null {
-  const rgbaDefaults: RgbaObject = {
+export function stringToRgbaObject(value: string): RgbaObject<Value255> {
+  const rgbaDefaults: RgbaObject<Value255> = {
     r: 0,
     g: 0,
     b: 0,
@@ -20,7 +20,7 @@ export function stringToRgbaObject(value: string): RgbaObject | null {
   }
 
   if (!isNonEmptyString(value)) {
-    return null
+    return { ...rgbaDefaults }
   }
 
   const normalizedValue = normalizeValue(value)
@@ -36,7 +36,7 @@ export function stringToRgbaObject(value: string): RgbaObject | null {
     ? getColorNameHex(normalizedValue)
     : normalizedValue
 
-  const result: RgbaObject = {
+  const result: RgbaObject<Value255> = {
     ...rgbaDefaults,
     ...(hexToRgbaObject(valueToProcess) ??
       rgbToRgbaObject(valueToProcess) ??

@@ -1,6 +1,7 @@
 import {
   AlphaValue,
   OptionalSpace,
+  Percentage,
   TransparentAlphaValue,
   Value255,
   ValuePercentage
@@ -49,9 +50,9 @@ export type TransparentRgbaColor =
  *     a: 1
  *   }
  */
-export interface RgbaObject {
-  r: RgbValue
-  g: RgbValue
-  b: RgbValue
+export interface RgbaObject<Value extends RgbValue | Percentage = RgbValue> {
+  r: Value
+  g: Value
+  b: Value
   a: AlphaValue
 }

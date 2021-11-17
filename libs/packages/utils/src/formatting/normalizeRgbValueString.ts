@@ -5,7 +5,7 @@ import { normalizeValue } from '@coloroscopy/utils'
 export function normalizeRgbValueString(value: RgbValueString): RgbValue {
   const normalizedValue = normalizeValue(value)
 
-  if (isValuePercentage(value)) {
-    return value
+  if (isValuePercentage(normalizedValue)) {
+    return normalizedValue
   }
 }

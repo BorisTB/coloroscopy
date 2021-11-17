@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 import { Alpha, Hue, Saturation } from '@coloroscopy/react'
+import { useEffect } from 'react'
+import { Color } from '@coloroscopy/color'
 
 export interface AppProps {}
 
@@ -22,6 +24,10 @@ const Center = styled.div`
 `
 
 export const App: React.FC<AppProps> = () => {
+  useEffect(() => {
+    // @ts-ignore
+    window['Color'] = Color
+  }, [])
   return (
     <Layout>
       <Center>

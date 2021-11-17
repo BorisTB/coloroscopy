@@ -1,10 +1,12 @@
 import { HexDigit } from './HexDigit'
 
+export type Hex = string
+
 /**
  * This is the best we can do with current typescript version.
  * Prefer ValidHexColor<T> if you can.
  */
-export type HexColor = `#${string}`
+export type HexColor = `#${Hex}`
 
 /**
  * Hack for typescript guard
