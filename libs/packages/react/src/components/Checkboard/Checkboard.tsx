@@ -6,16 +6,18 @@ export interface CheckboardProps extends React.ComponentPropsWithRef<'div'> {
   size?: number
 }
 
+const darkColor = '#D7D8DD'
+const lightColor = '#FFF'
+
 const Root = styled.div<CheckboardProps>`
-  background-image: linear-gradient(
-      to right,
-      rgba(192, 192, 192, 0.75),
-      rgba(192, 192, 192, 0.75)
-    ),
-    linear-gradient(to right, black 50%, white 50%),
-    linear-gradient(to bottom, black 50%, white 50%);
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(
+      ${darkColor} 0% 25%,
+      ${lightColor} 0% 50%
+    )
+    50% / ${({ size }) => `${toPx(size)} ${toPx(size)}`};
   background-blend-mode: normal, difference, normal;
-  background-size: ${({ size }) => `${toPx(size)} ${toPx(size)}`};
 `
 
 export const Checkboard = React.forwardRef<HTMLDivElement, CheckboardProps>(

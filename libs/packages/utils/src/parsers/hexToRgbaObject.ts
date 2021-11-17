@@ -7,7 +7,7 @@ import {
 import { hexValueToRgbValue } from './hexValueToRgbValue'
 import { hexValueToAlphaValue } from './hexValueToAlphaValue'
 
-export function hexToRgbaObject(value: string): RgbaObject {
+export function hexToRgbaObject(value: string): RgbaObject | null {
   const match = hexFullMatcher.match(value) ?? hexShortMatcher.match(value)
 
   if (match) {
@@ -20,4 +20,6 @@ export function hexToRgbaObject(value: string): RgbaObject {
         : 1
     }
   }
+
+  return null
 }

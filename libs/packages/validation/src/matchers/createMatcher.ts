@@ -38,7 +38,7 @@ export function createMatcher<Pattern extends RegexPattern = RegexPattern>(
 
   return {
     match: (value) =>
-      regexp.exec(value)?.groups as MatchesGroup<Pattern> | undefined,
-    test: (value) => regexp.test(value)
+      regexp?.exec(value)?.groups as MatchesGroup<Pattern> | undefined,
+    test: (value) => regexp?.test(value) || false
   }
 }

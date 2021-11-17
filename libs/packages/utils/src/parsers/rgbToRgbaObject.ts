@@ -7,7 +7,7 @@ import { hexValueToAlphaValue } from './hexValueToAlphaValue'
  * TODO: finish this, replace hexValueToRgbValue with something that converts possible percentage to integer
  * @param value
  */
-export function rgbToRgbaObject(value: string): RgbaObject {
+export function rgbToRgbaObject(value: string): RgbaObject | null {
   const match = rgbMatcher.match(value)
 
   if (match) {
@@ -20,4 +20,6 @@ export function rgbToRgbaObject(value: string): RgbaObject {
         : 1
     }
   }
+
+  return null
 }

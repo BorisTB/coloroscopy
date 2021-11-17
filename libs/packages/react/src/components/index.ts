@@ -1,2 +1,5 @@
+export * from './Alpha'
 export * from './Checkboard'
+export * from './Hue'
+export * from './Saturation'
 export * from './Swatch'
