@@ -15,7 +15,6 @@ import {
   alphaValueToDecimal,
   getHexColorName,
   getRgbBrightness,
-  inputToRgbaObject,
   rgbaObjectToRgbaString,
   rgbaObjectToRgbString,
   toHexString,
@@ -23,7 +22,11 @@ import {
   value255RgbaObjectToHex,
   value255ToPercentage
 } from '@coloroscopy/utils'
-import { isBrightnessLow, isNil } from '@coloroscopy/validation'
+import {
+  isBrightnessLow,
+  isNil,
+  isRgbaObjectValue255
+} from '@coloroscopy/validation'
 import { CssColorNameParser, HexParser, RgbaParser } from './parsers'
 import { ColorParser } from './ColorParser'
 
@@ -33,44 +36,54 @@ const defaultParsers = [
   new RgbaParser()
 ]
 
-export interface ColorOpts {
-  customParsers?: ColorParser[]
-}
-
 export class Color {
-  private static parsers: ColorParser[] = defaultParsers
+  private static parsers: ColorParser[] = [...defaultParsers]
 
   public static addParser(parser: ColorParser): void {
     this.parsers.unshift(parser)
+  }
+
+  private static parseValue(value: ColorInput): RgbaObject<Value255> | null {
+    let currentValue: ColorInput | RgbaObject<Value255> | unknown = value
+    let parsers = [...Color.parsers]
+    let finishedParsers: ColorParser[] = []
+
+    while (!isRgbaObjectValue255(currentValue) && parsers.length) {
+      const parser = parsers.shift()
+
+      if (parser) {
+        const parsedValue = parser.parse(currentValue)
+
+        if (!isNil(parsedValue)) {
+          parsers = [...parsers, ...finishedParsers]
+          currentValue = parsedValue
+        }
+
+        finishedParsers.push(parser)
+      }
+    }
+
+    if (isRgbaObjectValue255(currentValue)) {
+      return currentValue
+    }
+
+    console.error(`Couldn't find parser for value ${currentValue}`)
+
+    return null
   }
 
   private rgba: RgbaObject<Value255> = { r: 0, g: 0, b: 0, a: 0 }
 
   private originalInput: ColorInput
 
-  constructor(color: ColorInput, { customParsers }: ColorOpts = {}) {
+  constructor(color: ColorInput) {
     this.originalInput = color
 
-    const parsedInput = this.parseInput(color)
+    const parsedInput = Color.parseValue(color)
 
     if (!isNil(parsedInput)) {
       this.rgba = parsedInput
     }
-  }
-
-  private parseInput(value: ColorInput): RgbaObject<Value255> | null {
-    for (let i = 0; i < Color.parsers.length; i++) {
-      const parser = Color.parsers[i]
-      const parsedValue = parser.parse(value)
-
-      if (!isNil(parsedValue)) {
-        return parsedValue
-      }
-    }
-
-    console.error(`Couldn't find any parser for value ${value}`)
-
-    return null
   }
 
   private updateRgba(update: Partial<RgbaObject<Value255>>): void {
